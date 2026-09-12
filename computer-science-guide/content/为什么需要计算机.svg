@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1740" height="1040" viewBox="0 0 1740 1040" role="img" aria-labelledby="title desc">
+  <title id="title">为什么需要计算机？</title>
+  <desc id="desc">人面对大量重复计算，既耗时又容易出错，于是设法把计算规则交给机器执行，计算机由此诞生。</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f9fc"/>
+      <stop offset="1" stop-color="#e9f1fa"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#17355d" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0 0 L12 6 L0 12 Z" fill="#3478c5"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0 0 L12 6 L0 12 Z" fill="#d99722"/>
+    </marker>
+    <style>
+      .title { fill: #102a43; font: 700 52px -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+      .subtitle { fill: #627d98; font: 400 23px -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+      .eyebrow { fill: #4776aa; font: 700 16px -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; letter-spacing: 2px; }
+      .section { fill: #102a43; font: 700 28px -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+      .label { fill: #102a43; font: 700 23px -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+      .body { fill: #486581; font: 400 19px -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+      .formula { fill: #1f5e9f; font: 700 22px ui-monospace, SFMono-Regular, Menlo, monospace; }
+      .number { fill: #a3670c; font: 700 27px ui-monospace, SFMono-Regular, Menlo, monospace; }
+      .white-label { fill: #ffffff; font: 700 21px -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1740" height="1040" fill="url(#background)"/>
+  <path d="M0 904 C300 832 570 980 880 905 S1450 826 1740 900 V1040 H0 Z" fill="#dfeaf7"/>
+  <circle cx="1590" cy="104" r="142" fill="#d9e9f8"/>
+  <circle cx="1680" cy="58" r="54" fill="#c4dbf2"/>
+
+  <text x="90" y="88" class="eyebrow">COMPUTER SCIENCE GUIDE / COMPUTER HISTORY</text>
+  <text x="90" y="158" class="title">为什么需要计算机？</text>
+  <text x="90" y="202" class="subtitle">当计算变得重复、庞大又容易出错，人类开始想：能不能把它交给机器？</text>
+
+  <g filter="url(#shadow)">
+    <rect x="90" y="272" width="458" height="580" rx="30" fill="#ffffff"/>
+    <rect x="641" y="272" width="458" height="580" rx="30" fill="#ffffff"/>
+    <rect x="1192" y="272" width="458" height="580" rx="30" fill="#ffffff"/>
+  </g>
+
+  <text x="138" y="330" class="eyebrow">01 / THE PROBLEM</text>
+  <text x="138" y="382" class="section">人来计算</text>
+  <text x="138" y="417" class="body">每一道题都要亲手重复同样的步骤</text>
+
+  <!-- A tired person at a desk -->
+  <g stroke="#3478c5" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="202" cy="526" r="38" fill="#e9f3ff"/>
+    <path d="M160 608 C160 564 244 564 244 608 V665 H160 Z" fill="#e9f3ff"/>
+    <path d="M155 665 H346" fill="none"/>
+    <path d="M181 665 L166 737 M318 665 L333 737" fill="none"/>
+    <path d="M259 590 C288 580 309 601 321 625" fill="none"/>
+    <path d="M270 625 L342 625 L342 686 L270 686 Z" fill="#fff9ec" stroke="#d99722"/>
+  </g>
+  <text x="284" y="654" class="formula" font-size="18">2x+3=7</text>
+  <text x="284" y="677" class="formula" font-size="18">x = 2</text>
+  <g transform="translate(374 478)">
+    <circle cx="48" cy="48" r="43" fill="#fff9ec" stroke="#e9bc64" stroke-width="4"/>
+    <path d="M48 20 V48 L67 61" fill="none" stroke="#d99722" stroke-width="6" stroke-linecap="round"/>
+    <text x="48" y="116" text-anchor="middle" class="body">时间</text>
+  </g>
+  <text x="138" y="776" class="label">人的注意力被重复动作占满</text>
+  <text x="138" y="811" class="body">累了会慢，分心会错，停下来就没有结果。</text>
+
+  <text x="689" y="330" class="eyebrow">02 / THE PRESSURE</text>
+  <text x="689" y="382" class="section">问题不断重复</text>
+  <text x="689" y="417" class="body">数量一多，麻烦就不再是“算一道题”</text>
+
+  <g transform="translate(689 468)">
+    <rect width="362" height="62" rx="16" fill="#edf5fd" stroke="#b7d2eb" stroke-width="2"/>
+    <text x="24" y="40" class="formula">2x + 3 = 7</text>
+    <text x="320" y="40" text-anchor="end" class="body">第 1 题</text>
+    <rect y="78" width="362" height="62" rx="16" fill="#f4f8fc" stroke="#c9dbea" stroke-width="2"/>
+    <text x="24" y="118" class="formula">2x + 3 = 7</text>
+    <text x="320" y="118" text-anchor="end" class="body">第 2 题</text>
+    <rect y="156" width="362" height="62" rx="16" fill="#f4f8fc" stroke="#c9dbea" stroke-width="2"/>
+    <text x="24" y="196" class="formula">2x + 3 = 7</text>
+    <text x="320" y="196" text-anchor="end" class="body">第 3 题</text>
+    <path d="M164 244 H198 M180 228 V262" stroke="#9fb9d1" stroke-width="5" stroke-linecap="round"/>
+    <rect y="284" width="362" height="72" rx="18" fill="#fff5df" stroke="#e9bc64" stroke-width="2"/>
+    <text x="28" y="329" class="number">× 10,000</text>
+    <text x="320" y="329" text-anchor="end" class="body">同样的步骤</text>
+  </g>
+  <circle cx="1008" cy="704" r="25" fill="#fff0cb" stroke="#d99722" stroke-width="3"/>
+  <path d="M1008 690 V706 L1019 713" fill="none" stroke="#b87510" stroke-width="4" stroke-linecap="round"/>
+  <text x="689" y="778" class="label">重复、耗时、容易出错</text>
+  <text x="689" y="813" class="body">于是，一个愿望变得越来越清晰：</text>
+  <text x="689" y="842" fill="#a3670c" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif" font-size="21" font-weight="700">把规则交给不会疲倦的工具。</text>
+
+  <text x="1240" y="330" class="eyebrow">03 / THE IDEA</text>
+  <text x="1240" y="382" class="section">让机器来计算</text>
+  <text x="1240" y="417" class="body">人负责提出规则，机器负责反复执行</text>
+
+  <!-- A simple computer chip -->
+  <g transform="translate(1283 469)">
+    <g stroke="#3478c5" stroke-width="5" stroke-linecap="round">
+      <path d="M42 46 H0 M42 92 H0 M42 138 H0 M293 46 H335 M293 92 H335 M293 138 H335"/>
+      <path d="M88 0 V-38 M134 0 V-38 M180 0 V-38 M226 0 V-38 M88 184 V222 M134 184 V222 M180 184 V222 M226 184 V222"/>
+    </g>
+    <rect x="42" y="0" width="251" height="184" rx="24" fill="#e9f3ff" stroke="#3478c5" stroke-width="5"/>
+    <rect x="80" y="43" width="175" height="98" rx="16" fill="#ffffff" stroke="#9fc3e5" stroke-width="3"/>
+    <text x="167" y="85" text-anchor="middle" class="label">计算</text>
+    <text x="167" y="119" text-anchor="middle" class="formula">规则 → 结果</text>
+  </g>
+  <path d="M1283 700 H1618" fill="none" stroke="#3478c5" stroke-width="7" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+  <rect x="1283" y="724" width="335" height="66" rx="18" fill="#edf5fd" stroke="#b7d2eb" stroke-width="2"/>
+  <text x="1450" y="766" text-anchor="middle" class="label">一台机器，反复完成任务</text>
+
+  <path d="M565 558 H620" fill="none" stroke="#3478c5" stroke-width="8" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+  <path d="M1116 558 H1171" fill="none" stroke="#d99722" stroke-width="8" stroke-linecap="round" marker-end="url(#arrow-orange)"/>
+
+  <g transform="translate(90 910)">
+    <rect width="1560" height="82" rx="22" fill="#ffffff" opacity="0.92"/>
+    <circle cx="42" cy="41" r="12" fill="#3478c5"/>
+    <text x="72" y="49" class="label">计算机的起点，不是炫技，而是把人从繁琐计算中解放出来。</text>
+    <text x="1454" y="49" text-anchor="end" fill="#3478c5" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif" font-size="21" font-weight="700">自动化</text>
+  </g>
+</svg>
