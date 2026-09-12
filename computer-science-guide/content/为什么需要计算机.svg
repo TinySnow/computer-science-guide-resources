@@ -23,6 +23,7 @@
       .label { fill: #102a43; font: 700 23px -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
       .body { fill: #486581; font: 400 19px -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
       .formula { fill: #1f5e9f; font: 700 22px ui-monospace, SFMono-Regular, Menlo, monospace; }
+      .formula-small { fill: #1f5e9f; font: 700 16px ui-monospace, SFMono-Regular, Menlo, monospace; }
       .number { fill: #a3670c; font: 700 27px ui-monospace, SFMono-Regular, Menlo, monospace; }
       .white-label { fill: #ffffff; font: 700 21px -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
     </style>
@@ -56,8 +57,8 @@
     <path d="M259 590 C288 580 309 601 321 625" fill="none"/>
     <path d="M270 625 L342 625 L342 686 L270 686 Z" fill="#fff9ec" stroke="#d99722"/>
   </g>
-  <text x="284" y="654" class="formula" font-size="18">2x+3=7</text>
-  <text x="284" y="677" class="formula" font-size="18">x = 2</text>
+  <text x="280" y="654" class="formula-small">2x+3=7</text>
+  <text x="280" y="677" class="formula-small">x = 2</text>
   <g transform="translate(374 478)">
     <circle cx="48" cy="48" r="43" fill="#fff9ec" stroke="#e9bc64" stroke-width="4"/>
     <path d="M48 20 V48 L67 61" fill="none" stroke="#d99722" stroke-width="6" stroke-linecap="round"/>
@@ -70,26 +71,26 @@
   <text x="689" y="382" class="section">问题不断重复</text>
   <text x="689" y="417" class="body">数量一多，麻烦就不再是“算一道题”</text>
 
-  <g transform="translate(689 468)">
-    <rect width="362" height="62" rx="16" fill="#edf5fd" stroke="#b7d2eb" stroke-width="2"/>
+  <g transform="translate(689 452)">
+    <rect width="362" height="54" rx="16" fill="#edf5fd" stroke="#b7d2eb" stroke-width="2"/>
     <text x="24" y="40" class="formula">2x + 3 = 7</text>
     <text x="320" y="40" text-anchor="end" class="body">第 1 题</text>
-    <rect y="78" width="362" height="62" rx="16" fill="#f4f8fc" stroke="#c9dbea" stroke-width="2"/>
-    <text x="24" y="118" class="formula">2x + 3 = 7</text>
-    <text x="320" y="118" text-anchor="end" class="body">第 2 题</text>
-    <rect y="156" width="362" height="62" rx="16" fill="#f4f8fc" stroke="#c9dbea" stroke-width="2"/>
-    <text x="24" y="196" class="formula">2x + 3 = 7</text>
-    <text x="320" y="196" text-anchor="end" class="body">第 3 题</text>
-    <path d="M164 244 H198 M180 228 V262" stroke="#9fb9d1" stroke-width="5" stroke-linecap="round"/>
-    <rect y="284" width="362" height="72" rx="18" fill="#fff5df" stroke="#e9bc64" stroke-width="2"/>
-    <text x="28" y="329" class="number">× 10,000</text>
-    <text x="320" y="329" text-anchor="end" class="body">同样的步骤</text>
+    <rect y="70" width="362" height="54" rx="16" fill="#f4f8fc" stroke="#c9dbea" stroke-width="2"/>
+    <text x="24" y="106" class="formula">2x + 3 = 7</text>
+    <text x="320" y="106" text-anchor="end" class="body">第 2 题</text>
+    <rect y="140" width="362" height="54" rx="16" fill="#f4f8fc" stroke="#c9dbea" stroke-width="2"/>
+    <text x="24" y="176" class="formula">2x + 3 = 7</text>
+    <text x="320" y="176" text-anchor="end" class="body">第 3 题</text>
+    <path d="M164 216 H198 M180 204 V228" stroke="#9fb9d1" stroke-width="5" stroke-linecap="round"/>
+    <rect y="244" width="362" height="66" rx="18" fill="#fff5df" stroke="#e9bc64" stroke-width="2"/>
+    <text x="28" y="286" class="number">× 10,000</text>
+    <text x="320" y="286" text-anchor="end" class="body">同样的步骤</text>
   </g>
-  <circle cx="1008" cy="704" r="25" fill="#fff0cb" stroke="#d99722" stroke-width="3"/>
-  <path d="M1008 690 V706 L1019 713" fill="none" stroke="#b87510" stroke-width="4" stroke-linecap="round"/>
-  <text x="689" y="778" class="label">重复、耗时、容易出错</text>
-  <text x="689" y="813" class="body">于是，一个愿望变得越来越清晰：</text>
-  <text x="689" y="842" fill="#a3670c" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif" font-size="21" font-weight="700">把规则交给不会疲倦的工具。</text>
+  <circle cx="1008" cy="656" r="25" fill="#fff0cb" stroke="#d99722" stroke-width="3"/>
+  <path d="M1008 642 V658 L1019 665" fill="none" stroke="#b87510" stroke-width="4" stroke-linecap="round"/>
+  <text x="689" y="770" class="label">重复、耗时、容易出错</text>
+  <text x="689" y="801" class="body">于是，一个愿望变得越来越清晰：</text>
+  <text x="689" y="831" fill="#a3670c" font-family="-apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, sans-serif" font-size="19" font-weight="700">把规则交给不会疲倦的工具。</text>
 
   <text x="1240" y="330" class="eyebrow">03 / THE IDEA</text>
   <text x="1240" y="382" class="section">让机器来计算</text>
