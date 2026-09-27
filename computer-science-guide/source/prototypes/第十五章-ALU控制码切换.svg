@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1672" height="941" viewBox="0 0 1672 941" role="img" aria-labelledby="title desc">
+  <title id="title">ALU：四条路都在算，只放行一个答案</title>
+  <desc id="desc">输入 A 和 B 同时进入加法、减法、按位与和按位或四条运算路径。控制码 OP 等于 01 时，多路选择器只放行减法结果 0010。</desc>
+
+  <defs>
+    <style>
+      .cn { font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; }
+      .mono { font-family: "SFMono-Regular", Menlo, Consolas, monospace; }
+      .navy { fill: #0B2855; }
+      .muted { fill: #65748D; }
+      .title { font-size: 58px; font-weight: 700; letter-spacing: 0.5px; }
+      .subtitle { font-size: 27px; font-weight: 400; }
+      .section { font-size: 27px; font-weight: 650; }
+      .label { font-size: 25px; font-weight: 650; }
+      .body { font-size: 23px; font-weight: 400; }
+      .small { font-size: 19px; font-weight: 400; }
+      .code { font-size: 25px; font-weight: 700; }
+      .wire { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1568E0"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#087F3F"/>
+    </marker>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#F85C0C"/>
+    </marker>
+    <marker id="arrow-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#A8B7CA"/>
+    </marker>
+  </defs>
+
+  <rect width="1672" height="941" fill="#FFFEFF"/>
+
+  <!-- 标题区 -->
+  <text x="52" y="72" class="cn navy title">ALU：四条路都在算，只放行一个答案</text>
+  <text x="54" y="119" class="cn navy subtitle">A、B 同时进入四种运算电路；控制码只决定哪一路结果能够抵达出口。</text>
+
+  <!-- 输入区 -->
+  <text x="55" y="192" class="cn navy section">输入保持不变</text>
+  <rect x="54" y="233" width="218" height="92" rx="18" fill="#EFF7FE" stroke="#1568E0" stroke-width="2.5"/>
+  <text x="84" y="270" class="mono navy label">A[3:0]</text>
+  <text x="84" y="306" class="mono" fill="#1568E0" font-size="29" font-weight="700">0101</text>
+
+  <rect x="54" y="405" width="218" height="92" rx="18" fill="#EDF9F1" stroke="#087F3F" stroke-width="2.5"/>
+  <text x="84" y="442" class="mono navy label">B[3:0]</text>
+  <text x="84" y="478" class="mono" fill="#087F3F" font-size="29" font-weight="700">0011</text>
+
+  <!-- ALU 内部范围 -->
+  <rect x="320" y="161" width="1010" height="512" rx="24" fill="#FCFDFF" stroke="#6C9FE8" stroke-width="2.2" stroke-dasharray="10 9"/>
+  <rect x="348" y="179" width="164" height="44" rx="12" fill="#EFF7FE"/>
+  <text x="371" y="209" class="cn" fill="#155ECF" font-size="25" font-weight="700">ALU 内部</text>
+  <text x="539" y="207" class="cn muted small">四条路径并行计算</text>
+
+  <!-- A、B 总线 -->
+  <path d="M272 279 H368" class="wire" stroke="#1568E0" stroke-width="4"/>
+  <path d="M368 258 V594" class="wire" stroke="#1568E0" stroke-width="4"/>
+  <path d="M272 451 H414" class="wire" stroke="#087F3F" stroke-width="4"/>
+  <path d="M414 286 V622" class="wire" stroke="#087F3F" stroke-width="4"/>
+
+  <!-- 输入分支：A -->
+  <path d="M368 258 H499" class="wire" stroke="#1568E0" stroke-width="3.2" marker-end="url(#arrow-blue)"/>
+  <path d="M368 370 H499" class="wire" stroke="#1568E0" stroke-width="3.2" marker-end="url(#arrow-blue)"/>
+  <path d="M368 482 H499" class="wire" stroke="#1568E0" stroke-width="3.2" marker-end="url(#arrow-blue)"/>
+  <path d="M368 594 H499" class="wire" stroke="#1568E0" stroke-width="3.2" marker-end="url(#arrow-blue)"/>
+
+  <!-- 输入分支：B -->
+  <path d="M414 286 H499" class="wire" stroke="#087F3F" stroke-width="3.2" marker-end="url(#arrow-green)"/>
+  <path d="M414 398 H499" class="wire" stroke="#087F3F" stroke-width="3.2" marker-end="url(#arrow-green)"/>
+  <path d="M414 510 H499" class="wire" stroke="#087F3F" stroke-width="3.2" marker-end="url(#arrow-green)"/>
+  <path d="M414 622 H499" class="wire" stroke="#087F3F" stroke-width="3.2" marker-end="url(#arrow-green)"/>
+
+  <!-- 连接结点 -->
+  <g fill="#1568E0">
+    <circle cx="368" cy="258" r="5"/><circle cx="368" cy="279" r="5"/><circle cx="368" cy="370" r="5"/><circle cx="368" cy="482" r="5"/><circle cx="368" cy="594" r="5"/>
+  </g>
+  <g fill="#087F3F">
+    <circle cx="414" cy="286" r="5"/><circle cx="414" cy="398" r="5"/><circle cx="414" cy="451" r="5"/><circle cx="414" cy="510" r="5"/><circle cx="414" cy="622" r="5"/>
+  </g>
+
+  <!-- 四种运算 -->
+  <rect id="card-00" x="500" y="229" width="330" height="82" rx="17" fill="#EFF7FE" stroke="#5295DF" stroke-width="2"/>
+  <text x="530" y="263" class="cn" fill="#155ECF" font-size="23" font-weight="700">加法</text>
+  <text x="530" y="294" class="mono navy body">A + B = 1000</text>
+
+  <rect id="card-01" x="500" y="341" width="330" height="82" rx="17" fill="#FEF2E5" stroke="#F85C0C" stroke-width="4"/>
+  <text x="530" y="375" class="cn" fill="#C84500" font-size="23" font-weight="700">减法</text>
+  <text x="530" y="406" class="mono navy body">A - B = 0010</text>
+
+  <rect id="card-10" x="500" y="453" width="330" height="82" rx="17" fill="#EDF9F1" stroke="#259A5E" stroke-width="2"/>
+  <text x="530" y="487" class="cn" fill="#087F3F" font-size="23" font-weight="700">按位与</text>
+  <text x="530" y="518" class="mono navy body">A AND B = 0001</text>
+
+  <rect id="card-11" x="500" y="565" width="330" height="82" rx="17" fill="#F7F3FE" stroke="#886EC6" stroke-width="2"/>
+  <text x="530" y="599" class="cn" fill="#744AD2" font-size="23" font-weight="700">按位或</text>
+  <text x="530" y="630" class="mono navy body">A OR B = 0111</text>
+
+  <!-- 四路结果进入 MUX -->
+  <g id="selected-badge" transform="translate(0 112)">
+    <rect x="736" y="237" width="78" height="27" rx="13.5" fill="#F85C0C"/>
+    <text x="748" y="257" class="cn" fill="#FFFFFF" font-size="16" font-weight="700">已选中</text>
+  </g>
+
+  <path id="path-00" d="M830 270 H1047" class="wire" stroke="#A8B7CA" stroke-width="2.6" marker-end="url(#arrow-muted)"/>
+  <text id="result-label-00" x="865" y="257" class="mono" fill="#65748D" font-size="19" font-weight="400">R0  1000</text>
+
+  <path id="path-01" d="M830 382 H1047" class="wire" stroke="#F85C0C" stroke-width="5" marker-end="url(#arrow-orange)"/>
+  <text id="result-label-01" x="865" y="369" class="mono" fill="#C84500" font-size="21" font-weight="700">R1  0010</text>
+
+  <path id="path-10" d="M830 494 H1047" class="wire" stroke="#A8B7CA" stroke-width="2.6" marker-end="url(#arrow-muted)"/>
+  <text id="result-label-10" x="865" y="481" class="mono" fill="#65748D" font-size="19" font-weight="400">R2  0001</text>
+
+  <path id="path-11" d="M830 606 H1047" class="wire" stroke="#A8B7CA" stroke-width="2.6" marker-end="url(#arrow-muted)"/>
+  <text id="result-label-11" x="865" y="593" class="mono" fill="#65748D" font-size="19" font-weight="400">R3  0111</text>
+
+  <!-- 多路选择器 -->
+  <path d="M1049 224 L1243 270 L1243 566 L1049 630 Z" fill="#EFF7FE" stroke="#0B2855" stroke-width="3"/>
+  <text x="1103" y="394" class="cn navy" font-size="34" font-weight="700">4 选 1</text>
+  <text x="1082" y="436" class="cn navy label">多路选择器</text>
+  <text id="mux-selection" x="1095" y="475" class="cn" fill="#C84500" font-size="21" font-weight="650">放行 R1</text>
+
+  <!-- 输出 -->
+  <path d="M1243 423 H1392" class="wire" stroke="#F85C0C" stroke-width="5" marker-end="url(#arrow-orange)"/>
+  <rect x="1395" y="353" width="220" height="140" rx="20" fill="#FEF7F0" stroke="#F85C0C" stroke-width="3"/>
+  <text x="1430" y="395" class="mono navy label">Result[3:0]</text>
+  <text id="result-value" x="1455" y="456" class="mono" fill="#C84500" font-size="43" font-weight="750">0010</text>
+
+  <!-- 控制码 -->
+  <rect x="912" y="698" width="154" height="58" rx="16" fill="#FEF2E5" stroke="#F85C0C" stroke-width="2.5"/>
+  <text id="op-value" x="937" y="735" class="mono" fill="#C84500" font-size="24" font-weight="700">OP = 01</text>
+  <path d="M1066 727 H1133 V626" class="wire" stroke="#F85C0C" stroke-width="3.5" marker-end="url(#arrow-orange)"/>
+
+  <g class="mono" font-size="19" font-weight="650">
+    <rect id="pill-00" x="500" y="695" width="89" height="54" rx="14" fill="#F5F8FE" stroke="#C4D4E9" stroke-width="1.5"/>
+    <text id="pill-label-00" x="521" y="728" fill="#65748D">00 加</text>
+    <rect id="pill-01" x="600" y="695" width="89" height="54" rx="14" fill="#FEF2E5" stroke="#F85C0C" stroke-width="2.5"/>
+    <text id="pill-label-01" x="621" y="728" fill="#C84500">01 减</text>
+    <rect id="pill-10" x="700" y="695" width="89" height="54" rx="14" fill="#F5F8FE" stroke="#C4D4E9" stroke-width="1.5"/>
+    <text id="pill-label-10" x="721" y="728" fill="#65748D">10 与</text>
+    <rect id="pill-11" x="800" y="695" width="89" height="54" rx="14" fill="#F5F8FE" stroke="#C4D4E9" stroke-width="1.5"/>
+    <text id="pill-label-11" x="821" y="728" fill="#65748D">11 或</text>
+  </g>
+
+  <!-- 底部关键点 -->
+  <rect x="48" y="808" width="1576" height="98" rx="18" fill="#FFFFFF" stroke="#6C9FE8" stroke-width="2.2" stroke-dasharray="10 8"/>
+  <g transform="translate(83 826)" fill="none" stroke="#1568E0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M28 4 C13 4 4 15 4 28 C4 38 10 44 16 50 C20 54 20 58 20 61 H36 C36 58 36 54 40 50 C46 44 52 38 52 28 C52 15 43 4 28 4 Z"/>
+    <path d="M20 66 H36 M22 72 H34 M25 78 H31"/>
+    <path d="M28 -2 V-10 M5 6 L-1 0 M51 6 L57 0 M-1 28 H-10 M57 28 H66"/>
+    <path d="M23 47 V34 L28 39 L33 34 V47"/>
+  </g>
+  <line x1="167" y1="828" x2="167" y2="887" stroke="#6C9FE8" stroke-width="2"/>
+  <text x="198" y="870" class="cn" fill="#1568E0" font-size="29" font-weight="700">关键点：</text>
+  <text x="330" y="870" class="cn navy" font-size="27" font-weight="450">四路电路始终同时计算；控制码不参与运算，只决定哪一个结果被送到出口。</text>
+</svg>
