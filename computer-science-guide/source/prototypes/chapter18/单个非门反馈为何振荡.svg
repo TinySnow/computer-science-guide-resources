@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1672" height="941" viewBox="0 0 1672 941" role="img" aria-labelledby="title desc">
+  <title id="title">一个非门绕回自己：为什么停不下来</title>
+  <desc id="desc">非门当前输出 Q 等于 0，反馈回输入后，非门要求输出变成 1。</desc>
+  <defs>
+    <style>
+      .cn{font-family:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif}.mono{font-family:"SFMono-Regular",Menlo,Consolas,monospace}.navy{fill:#0B2855}.muted{fill:#65748D}.title{font-size:58px;font-weight:700}.subtitle{font-size:27px}.section{font-size:27px;font-weight:650}.label{font-size:25px;font-weight:650}.wire{fill:none;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+    <marker id="arrow-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#A8B7CA"/></marker>
+    <marker id="arrow-hot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#F85C0C"/></marker>
+  </defs>
+  <rect width="1672" height="941" fill="#FFFEFF"/>
+  <text x="52" y="72" class="cn navy title">一个非门绕回自己：为什么停不下来？</text>
+  <text x="54" y="119" class="cn navy subtitle">Q = NOT Q 没有稳定解；传播延迟只会让 0 和 1 轮流出现。</text>
+
+  <rect x="49" y="159" width="1110" height="579" rx="25" fill="#FCFDFF" stroke="#6C9FE8" stroke-width="2.2" stroke-dasharray="10 9"/>
+  <rect x="76" y="178" width="260" height="44" rx="12" fill="#EFF7FE"/>
+  <text x="98" y="208" class="cn" fill="#155ECF" font-size="24" font-weight="700">把输出接回输入</text>
+  <text x="856" y="205" class="cn muted" font-size="19">考虑传播延迟的简化示意</text>
+
+  <text x="161" y="385" class="mono navy" font-size="27" font-weight="700">输入</text>
+  <rect id="input-chip" x="137" y="412" width="118" height="72" rx="18" fill="#EFF7FE" stroke="#1568E0" stroke-width="2.5"/>
+  <text id="input-value" x="178" y="461" class="mono" fill="#1568E0" font-size="36" font-weight="750">0</text>
+  <path id="forward-wire" d="M255 448H489" class="wire" stroke="#F85C0C" stroke-width="5" marker-end="url(#arrow-hot)"/>
+
+  <path d="M500 335L735 448L500 561Z" fill="#F5F8FE" stroke="#0B2855" stroke-width="4"/>
+  <circle cx="754" cy="448" r="19" fill="#FFFFFF" stroke="#0B2855" stroke-width="4"/>
+  <text x="548" y="462" class="cn navy" font-size="36" font-weight="700">非门</text>
+
+  <path id="output-wire" d="M773 448H987" class="wire" stroke="#A8B7CA" stroke-width="3" marker-end="url(#arrow-muted)"/>
+  <rect id="output-chip" x="990" y="412" width="118" height="72" rx="18" fill="#FEF2E5" stroke="#F85C0C" stroke-width="3"/>
+  <text x="1024" y="385" class="mono navy" font-size="27" font-weight="700">Q</text>
+  <text id="output-value" x="1031" y="461" class="mono" fill="#C84500" font-size="36" font-weight="750">1</text>
+
+  <path id="feedback-wire" d="M1049 484V646H196V484" class="wire" stroke="#A8B7CA" stroke-width="3" marker-end="url(#arrow-muted)"/>
+  <text x="540" y="686" class="cn muted" font-size="23">输出经过一小段传播时间，再回到输入</text>
+
+  <rect x="1205" y="159" width="419" height="579" rx="25" fill="#F8FAFE" stroke="#C4D4E9" stroke-width="2"/>
+  <text x="1242" y="211" class="cn navy section">这一刻发生了什么？</text>
+  <rect id="phase-badge" x="1242" y="244" width="118" height="40" rx="20" fill="#FEF2E5"/>
+  <text id="phase-number" x="1274" y="271" class="cn" fill="#C84500" font-size="20" font-weight="700">第 1 步</text>
+  <text id="state-title" x="1242" y="354" class="cn navy" font-size="36" font-weight="700">Q 刚变成 1</text>
+  <text id="state-line-1" x="1242" y="411" class="cn muted" font-size="25">输入端暂时还是 0</text>
+  <text id="state-line-2" x="1242" y="452" class="cn muted" font-size="25">非门于是输出 1</text>
+  <line x1="1242" y1="499" x2="1588" y2="499" stroke="#C4D4E9" stroke-width="2"/>
+  <text x="1242" y="548" class="cn navy" font-size="23" font-weight="650">接下来</text>
+  <text id="next-line-1" x="1242" y="590" class="cn" fill="#C84500" font-size="25">这个 1 会沿反馈线</text>
+  <text id="next-line-2" x="1242" y="631" class="cn" fill="#C84500" font-size="25">重新回到输入端</text>
+
+  <rect x="48" y="808" width="1576" height="98" rx="18" fill="#FFFFFF" stroke="#6C9FE8" stroke-width="2.2" stroke-dasharray="10 8"/>
+  <g transform="translate(83 826)" fill="none" stroke="#1568E0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M28 4C13 4 4 15 4 28C4 38 10 44 16 50C20 54 20 58 20 61H36C36 58 36 54 40 50C46 44 52 38 52 28C52 15 43 4 28 4Z"/><path d="M20 66H36M22 72H34M25 78H31"/><path d="M28-2V-10M5 6L-1 0M51 6L57 0M-1 28H-10M57 28H66"/><path d="M23 47V34L28 39L33 34V47"/></g>
+  <line x1="167" y1="828" x2="167" y2="887" stroke="#6C9FE8" stroke-width="2"/>
+  <text x="198" y="870" class="cn" fill="#1568E0" font-size="29" font-weight="700">关键点：</text>
+  <text x="330" y="870" class="cn navy" font-size="27">单个非门的自反馈没有稳定状态，不能可靠保存 0 或 1。</text>
+</svg>
