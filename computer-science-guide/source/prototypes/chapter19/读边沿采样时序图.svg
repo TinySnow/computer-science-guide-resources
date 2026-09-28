@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1672" height="941" viewBox="0 0 1672 941" role="img" aria-labelledby="title desc">
+  <title id="title">读时序图：先找边沿，再看 D，最后看 Q</title>
+  <desc id="desc">固定展示 CLK、D、Q 三行波形，指示线依次说明上升沿采样、边沿之间输入变化、以及 Q 在边沿后稍晚更新。</desc>
+  <defs>
+    <style>.cn{font-family:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif}.mono{font-family:"SFMono-Regular",Menlo,Consolas,monospace}.navy{fill:#0B2855}.muted{fill:#65748D}.title{font-size:58px;font-weight:750}.subtitle{font-size:27px}.wire{fill:none;stroke-linecap:round;stroke-linejoin:round}</style>
+    <marker id="arrow-time" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#0B2855"/></marker>
+  </defs>
+  <rect width="1672" height="941" fill="#FFFEFF"/>
+  <text x="52" y="72" class="cn navy title">读时序图：先找边沿，再看 D，最后看 Q</text>
+  <text x="54" y="119" class="cn navy subtitle">波形保持不动；紫色指示线带你逐步读取同一张图。Q 的更新延迟为便于观察而放大。</text>
+
+  <!-- 当前步骤 -->
+  <circle id="step-badge" cx="78" cy="181" r="28" fill="#1568E0"/>
+  <text id="step-number" x="78" y="190" class="cn" fill="#FFFFFF" font-size="23" font-weight="750" text-anchor="middle">1</text>
+  <text id="step-title" x="122" y="190" class="cn navy" font-size="29" font-weight="750">第 1 个上升沿：采到 D = 1</text>
+  <text id="step-note" x="935" y="190" class="cn muted" font-size="23">D 在边沿前后稳定，Q 原本也是 1</text>
+
+  <!-- 波形区底线与采样窗口 -->
+  <g opacity="0.38" fill="#F7F3FE">
+    <rect x="336" y="224" width="68" height="489" rx="8"/>
+    <rect x="766" y="224" width="68" height="489" rx="8"/>
+    <rect x="1196" y="224" width="68" height="489" rx="8"/>
+  </g>
+  <g id="active-window" transform="translate(370 0)">
+    <rect x="-34" y="224" width="68" height="489" rx="8" fill="#FEF2E5" fill-opacity="0.72" stroke="#F85C0C" stroke-width="2" stroke-dasharray="7 6"/>
+    <line x1="0" y1="224" x2="0" y2="713" stroke="#F85C0C" stroke-width="2"/>
+    <text x="-8" y="246" class="cn" fill="#C84500" font-size="17" text-anchor="end">建立</text>
+    <text x="8" y="246" class="cn" fill="#C84500" font-size="17">保持</text>
+  </g>
+
+  <g stroke="#D9E2F0" stroke-width="2">
+    <line x1="220" y1="330" x2="1580" y2="330"/>
+    <line x1="220" y1="490" x2="1580" y2="490"/>
+    <line x1="220" y1="650" x2="1580" y2="650"/>
+  </g>
+  <g class="mono navy" font-size="31" font-weight="750">
+    <text x="62" y="337">CLK</text><text x="86" y="497">D</text><text x="86" y="657">Q</text>
+  </g>
+  <g class="mono muted" font-size="18"><text x="172" y="300">1</text><text x="172" y="365">0</text><text x="172" y="460">1</text><text x="172" y="525">0</text><text x="172" y="620">1</text><text x="172" y="685">0</text></g>
+
+  <!-- 固定波形 -->
+  <path d="M220 360H370V300H540V360H800V300H970V360H1230V300H1400V360H1580" class="wire" stroke="#1568E0" stroke-width="5"/>
+  <path d="M220 460H620V520H1060V460H1580" class="wire" stroke="#F85C0C" stroke-width="5"/>
+  <path d="M220 620H870V680H1300V620H1580" class="wire" stroke="#087F3F" stroke-width="5"/>
+
+  <!-- 固定采样沿标记 -->
+  <g class="cn" fill="#155ECF" font-size="18" font-weight="700" text-anchor="middle">
+    <path d="M362 391L370 377L378 391Z" fill="#1568E0"/><text x="370" y="415">采样 1</text>
+    <path d="M792 391L800 377L808 391Z" fill="#1568E0"/><text x="800" y="415">采样 2</text>
+    <path d="M1222 391L1230 377L1238 391Z" fill="#1568E0"/><text x="1230" y="415">采样 3</text>
+  </g>
+
+  <!-- Q 更新延迟标注 -->
+  <g class="cn" fill="#087F3F" font-size="18">
+    <path d="M800 594V575H870V594" class="wire" stroke="#087F3F" stroke-width="2"/>
+    <text x="835" y="566" text-anchor="middle">Q 稍后更新</text>
+    <path d="M1230 594V575H1300V594" class="wire" stroke="#087F3F" stroke-width="2"/>
+    <text x="1265" y="566" text-anchor="middle">Q 稍后更新</text>
+  </g>
+
+  <!-- 动态指示线与焦点 -->
+  <line id="cursor-line" x1="370" y1="218" x2="370" y2="713" stroke="#744AD2" stroke-width="4" stroke-dasharray="9 7"/>
+  <path id="cursor-head" d="M358 218H382L370 236Z" fill="#744AD2"/>
+  <circle id="d-focus" cx="370" cy="460" r="13" fill="#FFFFFF" stroke="#F85C0C" stroke-width="5"/>
+  <circle id="q-focus" cx="370" cy="620" r="13" fill="#FFFFFF" stroke="#087F3F" stroke-width="5"/>
+
+  <!-- 时间轴 -->
+  <path d="M220 744H1580" class="wire" stroke="#0B2855" stroke-width="2.5" marker-end="url(#arrow-time)"/>
+  <text x="1518" y="778" class="cn navy" font-size="22">时间</text>
+  <g class="cn muted" font-size="18" text-anchor="middle"><text x="370" y="778">第 1 个上升沿</text><text x="800" y="778">第 2 个上升沿</text><text x="1230" y="778">第 3 个上升沿</text></g>
+
+  <!-- 底部关键点 -->
+  <rect x="48" y="808" width="1576" height="98" rx="18" fill="#FFFFFF" stroke="#6C9FE8" stroke-width="2.2" stroke-dasharray="10 8"/>
+  <g transform="translate(83 826)" fill="none" stroke="#1568E0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M28 4C13 4 4 15 4 28C4 38 10 44 16 50C20 54 20 58 20 61H36C36 58 36 54 40 50C46 44 52 38 52 28C52 15 43 4 28 4Z"/><path d="M20 66H36M22 72H34M25 78H31"/><path d="M28-2V-10M5 6L-1 0M51 6L57 0M-1 28H-10M57 28H66"/><path d="M23 47V34L28 39L33 34V47"/></g>
+  <line x1="167" y1="828" x2="167" y2="887" stroke="#6C9FE8" stroke-width="2"/>
+  <text x="198" y="870" class="cn" fill="#1568E0" font-size="29" font-weight="700">关键点：</text>
+  <text x="330" y="870" class="cn navy" font-size="27">边沿只负责采样；D 可在两沿之间变化，Q 只在采样后稍晚更新。</text>
+</svg>
